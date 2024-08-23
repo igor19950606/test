@@ -50,7 +50,7 @@ public class LionTest {
     void testInvalid() {
         String invalidSex = "Исключение";
         Exception exception = assertThrows(Exception.class, () -> {
-            Lion lion = new Lion(invalidSex);
+            new Lion(invalidSex);
         });
         assertEquals("Используйте допустимые значения пола животного - самей или самка", exception.getMessage());
     }
