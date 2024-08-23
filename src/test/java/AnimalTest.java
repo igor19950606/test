@@ -23,9 +23,7 @@ public class AnimalTest {
 
     @Test
     public void testFoodUnknownAnimal() {
-        Exception exception = assertThrows(Exception.class, () -> {
-            animal.getFood("Неизвестное животное");
-        });
+        Exception exception = assertThrows(Exception.class, () -> animal.getFood("Неизвестное животное"));
 
         String expectedMessage = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
         String actualMessage = exception.getMessage();
